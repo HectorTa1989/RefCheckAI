@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Report — {{ candidate.name }}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 11pt;
+    color: #1D1D1F;
+    background: #FFFFFF;
+    line-height: 1.5;
+  }
+
+  /* ── Cover header ──────────────── */
+  .cover {
+    background: linear-gradient(135deg, #0071E3 0%, #0056B0 100%);
+    color: white;
+    padding: 48pt 48pt 40pt;
+    margin-bottom: 0;
+  }
+  .logo { font-size: 13pt; font-weight: 700; opacity: 0.85; margin-bottom: 24pt; }
+  .cover h1 { font-size: 26pt; font-weight: 800; letter-spacing: -0.5pt; margin-bottom: 4pt; }
+  .cover .role { font-size: 13pt; opacity: 0.8; margin-bottom: 28pt; }
+
+  .score-bar-row {
+    display: flex; gap: 24pt; align-items: flex-end;
+  }
+  .big-score {
+    font-size: 52pt; font-weight: 800; letter-spacing: -2pt; line-height: 1;
+  }
+  .big-score span { font-size: 20pt; opacity: 0.6; }
+  .rec-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 100pt;
+    padding: 6pt 16pt;
+    font-size: 11pt;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.2pt;
+  }
+  .meta-row {
+    display: flex; gap: 24pt; margin-top: 20pt; opacity: 0.7; font-size: 10pt;
+  }
+
+  /* ── Section ───────────────────── */
+  .section { padding: 28pt 48pt; border-bottom: 1pt solid #E5E5EA; }
+  .section-title {
+    font-size: 8pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.2pt; color: #0071E3; margin-bottom: 16pt;
+  }
+
+  /* ── Summary cards ─────────────── */
+  .ref-cards { display: flex; gap: 14pt; }
+  .ref-card {
+    flex: 1; border: 1pt solid #E5E5EA; border-radius: 10pt; padding: 16pt;
+    background: #FAFAFA;
+  }
+  .ref-card-name { font-size: 11pt; font-weight: 700; margin-bottom: 2pt; }
+  .ref-card-rel  { font-size: 9pt; color: #6E6E73; margin-bottom: 10pt; }
+  .ref-score     { font-size: 22pt; font-weight: 800; color: #1D1D1F; line-height: 1; }
+  .ref-score span { font-size: 11pt; color: #6E6E73; }
+  .rehire-tag {
+    display: inline-block;
+    font-size: 8pt; font-weight: 600;
+    padding: 3pt 8pt; border-radius: 100pt;
+    margin-top: 6pt;
+  }
+  .rehire-yes  { background: #E8F9EE; color: #1A7F3C; }
+  .rehire-no   { background: #FEE8E8; color: #B91C1C; }
+  .rehire-null { background: #F5F5F7; color: #6E6E73; }
+
+  /* ── Score bar ──────────────────── */
+  .score-progress {
+    height: 6pt; background: #E5E5EA; border-radius: 100pt;
+    margin: 4pt 0 2pt; overflow: hidden;
+  }
+  .score-fill { height: 100%; border-radius: 100pt; background: #0071E3; }
+  .score-fill.low  { background: #FF3B30; }
+  .score-fill.mid  { background: #FF9F0A; }
+  .score-fill.high { background: #34C759; }
+
+  /* ── Reference detail block ─────── */
+  .ref-detail { margin-bottom: 28pt; }
+  .ref-detail-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 14pt; padding-bottom: 14pt; border-bottom: 1pt solid #E5E5EA;
+  }
+  .ref-detail-name { font-size: 14pt; font-weight: 700; }
+  .ref-detail-rel  { font-size: 10pt; color: #6E6E73; margin-top: 2pt; }
+  .ref-score-badge {
+    font-size: 22pt; font-weight: 800;
+    color: #0071E3; text-align: right; line-height: 1;
+  }
+  .ref-score-badge span { font-size: 11pt; color: #6E6E73; }
+
+  .enthusiasm-row { display: flex; gap: 8pt; align-items: center; margin-bottom: 12pt; }
+  .e-label { font-size: 9pt; font-weight: 600; text-transform: uppercase;
+             letter-spacing: 0.8pt; color: #6E6E73; }
+  .e-val   { font-size: 10pt; font-weight: 600; color: #1D1D1F; }
+
+  /* QA table */
+  .qa-table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+  .qa-table th {
+    text-align: left; font-size: 8pt; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.8pt; color: #6E6E73;
+    padding: 6pt 8pt; border-bottom: 1pt solid #E5E5EA;
+  }
+  .qa-table td { padding: 8pt 8pt; vertical-align: top; border-bottom: 0.5pt solid #F5F5F7; }
+  .qa-table .q-col { width: 28%; color: #6E6E73; font-weight: 500; }
+  .qa-table .a-col { width: 64%; }
+  .qa-table .s-col { width: 8%; text-align: center; font-weight: 700; }
+
+  /* Highlights */
+  .highlights { display: flex; gap: 16pt; margin-top: 12pt; }
+  .highlight-box { flex: 1; border-radius: 8pt; padding: 12pt; }
+  .strengths-box { background: #E8F9EE; }
+  .flags-box     { background: #FEE8E8; }
+  .highlight-title { font-size: 8pt; font-weight: 700; text-transform: uppercase;
+                     letter-spacing: 0.8pt; margin-bottom: 6pt; }
+  .strengths-box .highlight-title { color: #1A7F3C; }
+  .flags-box     .highlight-title { color: #B91C1C; }
+  .highlight-item { font-size: 10pt; margin-bottom: 3pt; }
+  .highlight-item::before { content: "• "; }
+  .no-items { font-size: 10pt; color: #6E6E73; font-style: italic; }
+
+  /* Quotes */
+  .quotes-box { background: #F5F5F7; border-radius: 8pt; padding: 12pt; margin-top: 10pt; }
+  .quote-item {
+    font-size: 10.5pt; font-style: italic; color: #3D3D42;
+    border-left: 3pt solid #0071E3; padding-left: 10pt; margin-bottom: 8pt;
+  }
+  .quote-item:last-child { margin-bottom: 0; }
+
+  /* Summary */
+  .summary-text { font-size: 10.5pt; color: #3D3D42; line-height: 1.6; }
+
+  /* Footer */
+  .footer {
+    padding: 20pt 48pt; background: #F5F5F7;
+    font-size: 9pt; color: #AEAEB2; display: flex;
+    justify-content: space-between;
+  }
+
+  /* Page breaks */
+  .ref-detail-section { page-break-before: always; }
+  .cover { page-break-after: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ── Cover ─────────────────────────────────────── -->
+<div class="cover">
+  <div class="logo">RefCheck AI</div>
+  <h1>{{ candidate.name }}</h1>
+  <div class="role">{{ candidate.role_applied_for }} · {{ candidate.company_name }}</div>
+
+  <div class="score-bar-row">
+    <div>
+      <div class="big-score">{{ "%.1f"|format(candidate.overall_score or 0) }}<span>/10</span></div>
+      <div style="margin-top:8pt;font-size:10pt;opacity:0.7">Overall Reference Score</div>
+    </div>
+    <div style="padding-bottom:8pt">
+      <div class="rec-badge">{{ recommendation_label }}</div>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <span>{{ references|length }} reference{{ 's' if references|length != 1 }} checked</span>
+    <span>·</span>
+    <span>Generated {{ generated_at }}</span>
+  </div>
+</div>
+
+<!-- ── Summary cards ──────────────────────────────── -->
+<div class="section">
+  <div class="section-title">Reference Summary</div>
+  <div class="ref-cards">
+    {% for ref in references %}
+    <div class="ref-card">
+      <div class="ref-card-name">{{ ref.referee_name }}</div>
+      <div class="ref-card-rel">{{ ref.relationship }}</div>
+      <div class="ref-score">
+        {{ "%.1f"|format(ref.overall_reference_score or 0) }}<span>/10</span>
+      </div>
+      <div style="margin-top:4pt; font-size:9pt; color:#6E6E73;">
+        {{ ref.enthusiasm_label }}
+      </div>
+      {% if ref.would_rehire == true %}
+        <div class="rehire-tag rehire-yes">Would rehire ✓</div>
+      {% elif ref.would_rehire == false %}
+        <div class="rehire-tag rehire-no">Would not rehire</div>
+      {% else %}
+        <div class="rehire-tag rehire-null">Rehire not stated</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── Reference detail sections ──────────────────── -->
+{% for ref in references %}
+<div class="section ref-detail-section">
+  <div class="section-title">Reference {{ loop.index }} of {{ references|length }}</div>
+
+  <div class="ref-detail">
+    <div class="ref-detail-header">
+      <div>
+        <div class="ref-detail-name">{{ ref.referee_name }}</div>
+        <div class="ref-detail-rel">{{ ref.relationship }}
+          {% if ref.company_at_time %} · {{ ref.company_at_time }}{% endif %}
+        </div>
+      </div>
+      <div>
+        <div class="ref-score-badge">
+          {{ "%.1f"|format(ref.overall_reference_score or 0) }}<span>/10</span>
+        </div>
+      </div>
+    </div>
+
+    {% if ref.summary %}
+    <div class="summary-text" style="margin-bottom:14pt;">{{ ref.summary }}</div>
+    {% endif %}
+
+    <!-- Q&A -->
+    {% if ref.enriched_answers %}
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th class="q-col">Question</th>
+          <th class="a-col">Response</th>
+          <th class="s-col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for qa in ref.enriched_answers %}
+        <tr>
+          <td class="q-col">{{ qa.label }}</td>
+          <td class="a-col">{{ qa.text }}</td>
+          <td class="s-col">{% if qa.score %}{{ qa.score }}/5{% else %}—{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
+    <!-- Highlights -->
+    <div class="highlights" style="margin-top:14pt;">
+      <div class="highlight-box strengths-box">
+        <div class="highlight-title">Strengths</div>
+        {% if ref.strengths %}
+          {% for s in ref.strengths %}
+          <div class="highlight-item">{{ s }}</div>
+          {% endfor %}
+        {% else %}
+          <div class="no-items">None noted</div>
+        {% endif %}
+      </div>
+      <div class="highlight-box flags-box">
+        <div class="highlight-title">Red Flags</div>
+        {% if ref.red_flags %}
+          {% for f in ref.red_flags %}
+          <div class="highlight-item">{{ f }}</div>
+          {% endfor %}
+        {% else %}
+          <div class="no-items">None noted ✓</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Notable quotes -->
+    {% if ref.notable_quotes %}
+    <div class="quotes-box" style="margin-top:12pt;">
+      <div style="font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:0.8pt;color:#6E6E73;margin-bottom:8pt;">Notable Quotes</div>
+      {% for q in ref.notable_quotes %}
+      <div class="quote-item">"{{ q }}"</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+{% endfor %}
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<div class="footer">
+  <span>RefCheck AI · github.com/HectorTa1989/refcheck-ai</span>
+  <span>{{ generated_at }}</span>
+</div>
+
+</body>
+</html>
