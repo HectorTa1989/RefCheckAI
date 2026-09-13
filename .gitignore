@@ -1,0 +1,37 @@
+# Secrets — never commit. `git init` in this directory without this file would
+# stage backend/.env and frontend/.env.local on the first commit, and the CALL-E
+# and Supabase keys in them would be permanent public history.
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# Remotion render output (the mp4 is ~15 MB; publish it, don't commit it)
+demo/out/
+demo/*.mp4
+
+# Local databases and logs
+*.db
+*.sqlite3
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
