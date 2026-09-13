@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Apple-style CSS variables ───────────────────────── */
+:root {
+  --blue:        #0071E3;
+  --blue-dk:     #0056B0;
+  --blue-lt:     #E8F2FD;
+  --text:        #1D1D1F;
+  --secondary:   #6E6E73;
+  --tertiary:    #AEAEB2;
+  --fill-4:      #F5F5F7;
+  --fill-3:      #EBEBED;
+  --border:      #D2D2D7;
+  --surface:     #FFFFFF;
+  --green:       #34C759;
+  --green-lt:    #E8F9EE;
+  --red:         #FF3B30;
+  --red-lt:      #FEE8E8;
+  --orange:      #FF9F0A;
+  --orange-lt:   #FFF4E5;
+  --sidebar-w:   240px;
+}
+
+/* ── Base reset ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--fill-4);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.47059;
+  margin: 0;
+}
+
+/* ── Typography ───────────────────────────────────────── */
+.sf-display {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+               "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.021em;
+}
+
+.text-apple-large-title  { font-size: 34px; font-weight: 700; letter-spacing: -0.4px; }
+.text-apple-title-1      { font-size: 28px; font-weight: 700; letter-spacing: -0.3px; }
+.text-apple-title-2      { font-size: 22px; font-weight: 700; letter-spacing: -0.26px; }
+.text-apple-title-3      { font-size: 20px; font-weight: 600; letter-spacing: -0.2px; }
+.text-apple-headline     { font-size: 17px; font-weight: 600; letter-spacing: -0.1px; }
+.text-apple-body         { font-size: 17px; font-weight: 400; }
+.text-apple-callout      { font-size: 16px; font-weight: 400; }
+.text-apple-subheadline  { font-size: 15px; font-weight: 400; }
+.text-apple-footnote     { font-size: 13px; font-weight: 400; }
+.text-apple-caption      { font-size: 12px; font-weight: 400; }
+.text-apple-caption-2    { font-size: 11px; font-weight: 400; }
+
+/* ── Cards ────────────────────────────────────────────── */
+.apple-card {
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.apple-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 0 1px rgba(0,0,0,0.04);
+}
+.apple-card-sm {
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 15px; font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 980px;
+  border: none; cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-primary:hover:not(:disabled) { background: var(--blue-dk); }
+.btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--fill-3);
+  color: var(--blue);
+  font-size: 15px; font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 980px;
+  border: none; cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-secondary:hover:not(:disabled) { background: var(--border); }
+.btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent;
+  color: var(--blue);
+  font-size: 15px; font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 980px;
+  border: none; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.btn-ghost:hover { background: var(--blue-lt); }
+
+.btn-danger {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--red-lt);
+  color: var(--red);
+  font-size: 15px; font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 980px;
+  border: none; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.btn-danger:hover { background: #fdd5d3; }
+
+/* ── Inputs ───────────────────────────────────────────── */
+.apple-input {
+  display: block;
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--fill-4);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  font-family: inherit;
+}
+.apple-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+}
+.apple-input::placeholder { color: var(--tertiary); }
+
+.apple-textarea {
+  display: block; width: 100%;
+  padding: 11px 14px;
+  background: var(--fill-4);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px; color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none; resize: vertical; min-height: 100px;
+  font-family: inherit;
+}
+.apple-textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+}
+
+.apple-select {
+  display: block; width: 100%;
+  padding: 11px 14px;
+  background: var(--fill-4);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px; color: var(--text);
+  cursor: pointer; outline: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E6E73' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  font-family: inherit;
+}
+.apple-select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Badges ───────────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Dividers ─────────────────────────────────────────── */
+.divider {
+  height: 1px; background: var(--border); margin: 0;
+}
+
+/* ── Spinner ──────────────────────────────────────────── */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--fill-3);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ── Page fade ────────────────────────────────────────── */
+@keyframes pageFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-enter { animation: pageFadeUp 0.3s ease both; }
+
+/* ── Scrollbar (WebKit) ───────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 100px; }
+::-webkit-scrollbar-thumb:hover { background: var(--tertiary); }
+
+/* ── Tab bar ──────────────────────────────────────────── */
+.tab-bar {
+  display: flex; gap: 2px;
+  background: var(--fill-3);
+  border-radius: 10px;
+  padding: 3px;
+}
+.tab-item {
+  flex: 1; text-align: center;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--secondary);
+  cursor: pointer; border: none; background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+.tab-item.active {
+  background: var(--surface);
+  color: var(--text); font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
