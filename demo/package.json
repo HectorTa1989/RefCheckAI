@@ -1,0 +1,29 @@
+{
+  "name": "refcheck-demo-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render RefCheckDemo out/refcheck-ai-demo.mp4 --codec=h264 --crf=17",
+    "audio:v2": "python scripts/make_audio_v2.py",
+    "results:v2": "..\\backend\\.venv\\Scripts\\python scripts/make_results_v2.py",
+    "stills:v2": "node scripts/stills_v2.mjs",
+    "render:v2": "remotion render RefCheckWalkthrough refcheck-ai-demo-v2.mp4 --codec=h264 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.410",
+    "@remotion/cli": "4.0.410",
+    "@remotion/media-utils": "4.0.410",
+    "@remotion/renderer": "4.0.410",
+    "lucide-react": "^0.469.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.410"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "kokoro-js": "^1.2.1",
+    "typescript": "^5.7.2"
+  }
+}

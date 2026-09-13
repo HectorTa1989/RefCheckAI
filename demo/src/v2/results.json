@@ -1,0 +1,347 @@
+{
+  "overall_score": 8.4,
+  "recommendation": "yes",
+  "references": [
+    {
+      "key": "james",
+      "referee_name": "James Okafor",
+      "referee_phone": "+14155550142",
+      "relationship": "Former direct manager",
+      "company_at_time": "Tidewater Payments",
+      "call_status": "completed",
+      "call_outcome": "completed",
+      "referee_enthusiasm": "very_enthusiastic",
+      "would_rehire": true,
+      "answers": {
+        "q_relationship": {
+          "text": "Managed Maria for a little over three years on the payments platform team at Tidewater Payments.",
+          "score": 4
+        },
+        "q_technical": {
+          "text": "One of the strongest engineers he has managed. Led the move to a new ledger system with zero downtime and wrote most of the rollback plan.",
+          "score": 5
+        },
+        "q_problem_solving": {
+          "text": "Found the root cause of a Black Friday outage while the rest of the team was still triaging.",
+          "score": 4
+        },
+        "q_code_quality": {
+          "text": "Called her code reviews \"a masterclass\"; the whole team improved by reading them.",
+          "score": 5
+        },
+        "q_collaboration": {
+          "text": "Product and support trusted her to explain trade-offs in plain language.",
+          "score": 4
+        },
+        "q_learning": {
+          "text": "Productive on the new ledger stack within a few weeks.",
+          "score": 4
+        },
+        "q_under_pressure": {
+          "text": "Calm in incidents: \"the person you want on the bridge at 2 a.m.\"",
+          "score": 5
+        },
+        "q_rehire": {
+          "text": "Would hire her again \"in a heartbeat\"; she is the first call he would make.",
+          "score": 5
+        },
+        "q_fit": {
+          "text": "Expects her to do very well: owning a payments platform is the work she did for him at a senior level.",
+          "score": 4
+        }
+      },
+      "strengths": [
+        "Led a zero-downtime ledger migration",
+        "Code reviews that raised the whole team's bar",
+        "Calm, fast root-causing during incidents"
+      ],
+      "red_flags": [],
+      "notable_quotes": [
+        "If I were starting a team tomorrow, she's the first call I'd make.",
+        "She's the person you want on the bridge at 2 a.m."
+      ],
+      "summary": "James managed Maria for three years on Tidewater's payments platform team and was emphatic in his praise. He credits her with a zero-downtime ledger migration and a code-review culture that lifted the team, and would rehire her \"in a heartbeat\". No concerns raised.",
+      "overall_reference_score": 9.52,
+      "transcript": "Referee: Hello?\nAgent: Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with James Okafor?\nReferee: Yes, speaking.\nAgent: Great. Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes.\nReferee: Oh, sure! Happy to talk about Maria. Go ahead.\nAgent: To start, how would you describe her technical ability?\nReferee: Honestly? One of the strongest engineers I've ever managed.\nAgent: That's helpful. Can you give me a specific example of her best technical work?\nReferee: Sure. She led our move to a new ledger system, with zero downtime. And she wrote most of the rollback plan herself.\nAgent: How did you and Maria work together, and for how long?\nReferee: I was her manager at Tidewater Payments for a little over three years. She was on my payments platform team.\nAgent: Can you describe a difficult technical problem she solved?\nReferee: We had a nasty outage on Black Friday. She found the root cause while the rest of us were still triaging.\nAgent: How would you describe her code quality and engineering practices?\nReferee: Her code reviews were a masterclass. The whole team got better just by reading them.\nAgent: How did she work with non-technical teammates?\nReferee: Really well. Product and support trusted her to explain trade-offs in plain language.\nAgent: How quickly did she pick up new technologies?\nReferee: Fast. She was productive on the new ledger stack within a few weeks.\nAgent: How did she handle tight deadlines or production incidents?\nReferee: Calm. She's the person you want on the bridge at 2 a.m.\nAgent: We're considering her for a Senior Software Engineer role that owns our payments platform. How do you think she'd perform?\nReferee: Very well. That's exactly the work she did for us, and she did it at a senior level.\nAgent: Last question. Would you hire Maria again for an engineering role?\nReferee: In a heartbeat. If I were starting a team tomorrow, she's the first call I'd make.\nAgent: Thank you so much for your time. This is genuinely useful to us.\nReferee: Happy to help. Good luck!",
+      "structured_result": {
+        "spoke_with_referee": "yes",
+        "call_outcome": "completed",
+        "referee_enthusiasm": "very_enthusiastic",
+        "would_rehire": "yes",
+        "answers": {
+          "q_relationship": {
+            "response": "Managed Maria for a little over three years on the payments platform team at Tidewater Payments.",
+            "rating": "4"
+          },
+          "q_technical": {
+            "response": "One of the strongest engineers he has managed. Led the move to a new ledger system with zero downtime and wrote most of the rollback plan.",
+            "rating": "5"
+          },
+          "q_problem_solving": {
+            "response": "Found the root cause of a Black Friday outage while the rest of the team was still triaging.",
+            "rating": "4"
+          },
+          "q_code_quality": {
+            "response": "Called her code reviews \"a masterclass\"; the whole team improved by reading them.",
+            "rating": "5"
+          },
+          "q_collaboration": {
+            "response": "Product and support trusted her to explain trade-offs in plain language.",
+            "rating": "4"
+          },
+          "q_learning": {
+            "response": "Productive on the new ledger stack within a few weeks.",
+            "rating": "4"
+          },
+          "q_under_pressure": {
+            "response": "Calm in incidents: \"the person you want on the bridge at 2 a.m.\"",
+            "rating": "5"
+          },
+          "q_rehire": {
+            "response": "Would hire her again \"in a heartbeat\"; she is the first call he would make.",
+            "rating": "5"
+          },
+          "q_fit": {
+            "response": "Expects her to do very well: owning a payments platform is the work she did for him at a senior level.",
+            "rating": "4"
+          }
+        },
+        "strengths": [
+          "Led a zero-downtime ledger migration",
+          "Code reviews that raised the whole team's bar",
+          "Calm, fast root-causing during incidents"
+        ],
+        "red_flags": [],
+        "notable_quotes": [
+          "If I were starting a team tomorrow, she's the first call I'd make.",
+          "She's the person you want on the bridge at 2 a.m."
+        ],
+        "summary": "James managed Maria for three years on Tidewater's payments platform team and was emphatic in his praise. He credits her with a zero-downtime ledger migration and a code-review culture that lifted the team, and would rehire her \"in a heartbeat\". No concerns raised."
+      }
+    },
+    {
+      "key": "priya",
+      "referee_name": "Priya Raman",
+      "referee_phone": "+12065550188",
+      "relationship": "Product manager, peer",
+      "company_at_time": "Tidewater Payments",
+      "call_status": "completed",
+      "call_outcome": "completed",
+      "referee_enthusiasm": "positive",
+      "would_rehire": true,
+      "answers": {
+        "q_relationship": {
+          "text": "Worked with Maria for two years as the product manager on the payments team.",
+          "score": 4
+        },
+        "q_technical": {
+          "text": "A strong engineer who turned vague product asks into sound designs.",
+          "score": 4
+        },
+        "q_problem_solving": {
+          "text": "Broke a messy reconciliation problem into small, shippable steps.",
+          "score": 4
+        },
+        "q_code_quality": {
+          "text": "High standards, though she sometimes pushed for refactors when the timeline was tight.",
+          "score": 3
+        },
+        "q_collaboration": {
+          "text": "Excellent: explained trade-offs so non-engineers could make the call.",
+          "score": 5
+        },
+        "q_learning": {
+          "text": "Picked up the fraud-scoring domain quickly.",
+          "score": 4
+        },
+        "q_under_pressure": {
+          "text": "Steady under deadline pressure, and honest about estimates.",
+          "score": 4
+        },
+        "q_rehire": {
+          "text": "Yes, she would work with Maria again.",
+          "score": 4
+        },
+        "q_fit": {
+          "text": "Would do well owning a payments platform, with a product manager who holds the line on scope.",
+          "score": 4
+        }
+      },
+      "strengths": [
+        "Explains technical trade-offs to non-engineers",
+        "Honest, reliable estimates"
+      ],
+      "red_flags": [
+        "Can over-invest in refactors when timelines are tight"
+      ],
+      "notable_quotes": [
+        "She'll tell you the honest estimate, not the one you want to hear."
+      ],
+      "summary": "Priya was Maria's product counterpart for two years and describes a strong, communicative engineer with honest estimates. Her one reservation: Maria can push for refactors when the timeline is tight, which is worth probing in the final interview.",
+      "overall_reference_score": 8.25,
+      "transcript": "Agent: Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with Priya Raman?\nReferee: Yes, hi. Is this about Maria?\nAgent: It is. Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes.\nReferee: Sure, now works.\nAgent: How did you and Maria work together, and for how long?\nReferee: I was the product manager on her team for about two years.\nAgent: How would you describe her code quality and engineering practices?\nReferee: Really high standards. If anything, she sometimes pushed for a refactor when the timeline was tight.\nAgent: That's helpful. Can you give me a specific example?",
+      "structured_result": {
+        "spoke_with_referee": "yes",
+        "call_outcome": "completed",
+        "referee_enthusiasm": "positive",
+        "would_rehire": "yes",
+        "answers": {
+          "q_relationship": {
+            "response": "Worked with Maria for two years as the product manager on the payments team.",
+            "rating": "4"
+          },
+          "q_technical": {
+            "response": "A strong engineer who turned vague product asks into sound designs.",
+            "rating": "4"
+          },
+          "q_problem_solving": {
+            "response": "Broke a messy reconciliation problem into small, shippable steps.",
+            "rating": "4"
+          },
+          "q_code_quality": {
+            "response": "High standards, though she sometimes pushed for refactors when the timeline was tight.",
+            "rating": "3"
+          },
+          "q_collaboration": {
+            "response": "Excellent: explained trade-offs so non-engineers could make the call.",
+            "rating": "5"
+          },
+          "q_learning": {
+            "response": "Picked up the fraud-scoring domain quickly.",
+            "rating": "4"
+          },
+          "q_under_pressure": {
+            "response": "Steady under deadline pressure, and honest about estimates.",
+            "rating": "4"
+          },
+          "q_rehire": {
+            "response": "Yes, she would work with Maria again.",
+            "rating": "4"
+          },
+          "q_fit": {
+            "response": "Would do well owning a payments platform, with a product manager who holds the line on scope.",
+            "rating": "4"
+          }
+        },
+        "strengths": [
+          "Explains technical trade-offs to non-engineers",
+          "Honest, reliable estimates"
+        ],
+        "red_flags": [
+          "Can over-invest in refactors when timelines are tight"
+        ],
+        "notable_quotes": [
+          "She'll tell you the honest estimate, not the one you want to hear."
+        ],
+        "summary": "Priya was Maria's product counterpart for two years and describes a strong, communicative engineer with honest estimates. Her one reservation: Maria can push for refactors when the timeline is tight, which is worth probing in the final interview."
+      }
+    },
+    {
+      "key": "daniel",
+      "referee_name": "Daniel Weiss",
+      "referee_phone": "+13125550107",
+      "relationship": "Skip-level manager",
+      "company_at_time": "Harbor Commerce",
+      "call_status": "completed",
+      "call_outcome": "only_confirmed_employment",
+      "referee_enthusiasm": "neutral",
+      "would_rehire": null,
+      "answers": {
+        "q_relationship": {
+          "text": "Confirmed Maria worked at Harbor Commerce from 2019 to 2021 as a software engineer; would not say more, citing company policy.",
+          "score": 3
+        },
+        "q_technical": {
+          "text": "",
+          "score": null
+        },
+        "q_problem_solving": {
+          "text": "",
+          "score": null
+        },
+        "q_code_quality": {
+          "text": "",
+          "score": null
+        },
+        "q_collaboration": {
+          "text": "",
+          "score": null
+        },
+        "q_learning": {
+          "text": "",
+          "score": null
+        },
+        "q_under_pressure": {
+          "text": "",
+          "score": null
+        },
+        "q_rehire": {
+          "text": "Said she is eligible for rehire; nothing further.",
+          "score": 4
+        },
+        "q_fit": {
+          "text": "",
+          "score": null
+        }
+      },
+      "strengths": [],
+      "red_flags": [],
+      "notable_quotes": [
+        "Just that she's eligible for rehire."
+      ],
+      "summary": "Daniel confirmed dates and title only, citing Harbor Commerce policy, and added that Maria is eligible for rehire. No substantive assessment was given; the unanswered questions are left out of the score rather than counted as neutral.",
+      "overall_reference_score": 7.43,
+      "transcript": "Agent: Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with Daniel Weiss?\nReferee: Yes, this is Daniel.\nAgent: Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes.\nReferee: Sure. I can confirm she worked here from 2019 to 2021, as a software engineer.\nAgent: Thank you. How would you describe her work on your team?\nReferee: I'm sorry, company policy is that I can only confirm dates and title.\nAgent: I completely understand, and I appreciate your transparency. Is there anything at all you'd like us to know about Maria as a professional?\nReferee: Just that she's eligible for rehire. That's all I can share.\nAgent: That's helpful. Thank you so much for your time. This is genuinely useful to us.",
+      "structured_result": {
+        "spoke_with_referee": "yes",
+        "call_outcome": "only_confirmed_employment",
+        "referee_enthusiasm": "neutral",
+        "would_rehire": "unknown",
+        "answers": {
+          "q_relationship": {
+            "response": "Confirmed Maria worked at Harbor Commerce from 2019 to 2021 as a software engineer; would not say more, citing company policy.",
+            "rating": "3"
+          },
+          "q_technical": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_problem_solving": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_code_quality": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_collaboration": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_learning": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_under_pressure": {
+            "response": "",
+            "rating": "not_answered"
+          },
+          "q_rehire": {
+            "response": "Said she is eligible for rehire; nothing further.",
+            "rating": "4"
+          },
+          "q_fit": {
+            "response": "",
+            "rating": "not_answered"
+          }
+        },
+        "strengths": [],
+        "red_flags": [],
+        "notable_quotes": [
+          "Just that she's eligible for rehire."
+        ],
+        "summary": "Daniel confirmed dates and title only, citing Harbor Commerce policy, and added that Maria is eligible for rehire. No substantive assessment was given; the unanswered questions are left out of the score rather than counted as neutral."
+      }
+    }
+  ]
+}

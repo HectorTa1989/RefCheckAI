@@ -1,0 +1,79 @@
+{
+  "_about": "Everything spoken in the walkthrough. `text` is what the transcript shows; `say` (optional) is what the TTS engine reads. The agent's lines follow build_reference_task() in backend/services/calle_service.py word for word where it prescribes wording (opening, probe, HR-policy response, close).",
+  "_voices_note": "Kokoro-82M presets, chosen by predicted naturalness (UTMOS22) over 47 candidate voices: af_heart 4.52, am_fenrir 4.50, am_puck 4.50, am_michael 4.39. The Edge voice used in the first video scored 4.35.",
+  "voices": {
+    "narrator": { "engine": "kokoro", "voice": "am_fenrir", "speed": 1.06 },
+    "agent": { "engine": "kokoro", "voice": "af_heart", "speed": 1.04 },
+    "james": { "engine": "kokoro", "voice": "am_puck", "speed": 1.04 },
+    "daniel": { "engine": "kokoro", "voice": "am_michael", "speed": 1.02 }
+  },
+  "narration": [
+    { "id": "n01_intro", "text": "Reference checks are the part of hiring nobody has time for. Hours of phone tag, for every candidate. RefCheck A.I. hands those calls to Call E." },
+    { "id": "n02_dashboard", "text": "Every candidate lands on one dashboard, with a score and a clear recommendation." },
+    { "id": "n03_templates", "text": "Question sets are tuned by role, with follow-up probes for vague answers. Each set becomes the result schema Call E fills in on the call." },
+    { "id": "n04_candidate", "text": "A new check starts with the candidate and the role." },
+    { "id": "n05_references", "text": "Then two to four references, and how each one knows the candidate." },
+    { "id": "n06_template", "text": "Pick the question set." },
+    { "id": "n07_launch", "text": "And launch. Call E dials every reference at once, each on its own line." },
+    { "id": "n08_results", "text": "Each call comes back as JSON that Call E has already validated against our schema. The check scores itself, and the recruiter gets an email." },
+    { "id": "n09_report", "text": "Every reference shows strengths, red flags, quotes, a score for each question, and the full transcript." },
+    { "id": "n10_share", "text": "Share a read-only link with the hiring manager. Referee contact details stay private." },
+    { "id": "n11_pdf", "text": "Or export a P.D.F." },
+    { "id": "n12_outro", "text": "Hours of phone tag, down to one click. RefCheck A.I., built on Call E." }
+  ],
+  "calls": {
+    "james": {
+      "referee": "James Okafor",
+      "lines": [
+        { "id": "j00", "who": "user", "text": "Hello?", "gap": 0.35 },
+        { "id": "j01", "who": "bot", "text": "Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with James Okafor?", "say": "Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with James Okahfor?", "gap": 0.55 },
+        { "id": "j02", "who": "user", "text": "Yes, speaking.", "gap": 0.45 },
+        { "id": "j03", "who": "bot", "text": "Great. Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes.", "gap": 0.5 },
+        { "id": "j04", "who": "user", "text": "Oh, sure! Happy to talk about Maria. Go ahead.", "gap": 0.4 },
+        { "id": "j05", "who": "bot", "text": "To start, how would you describe her technical ability?", "gap": 0.55 },
+        { "id": "j06", "who": "user", "text": "Honestly? One of the strongest engineers I've ever managed.", "gap": 0.5 },
+        { "id": "j07", "who": "bot", "text": "That's helpful. Can you give me a specific example of her best technical work?", "gap": 0.6, "tag": "probe" },
+        { "id": "j08", "who": "user", "text": "Sure. She led our move to a new ledger system, with zero downtime. And she wrote most of the rollback plan herself.", "gap": 0.45 },
+        { "id": "j09", "who": "bot", "text": "Last question. Would you hire Maria again for an engineering role?", "gap": 1.35, "skip": true },
+        { "id": "j10", "who": "user", "text": "In a heartbeat. If I were starting a team tomorrow, she's the first call I'd make.", "gap": 0.45 },
+        { "id": "j11", "who": "bot", "text": "Thank you so much for your time. This is genuinely useful to us.", "gap": 0.55 },
+        { "id": "j12", "who": "user", "text": "Happy to help. Good luck!", "gap": 0.3 }
+      ],
+      "skipped_turns": [
+        { "who": "bot", "text": "How did you and Maria work together, and for how long?" },
+        { "who": "user", "text": "I was her manager at Tidewater Payments for a little over three years. She was on my payments platform team." },
+        { "who": "bot", "text": "Can you describe a difficult technical problem she solved?" },
+        { "who": "user", "text": "We had a nasty outage on Black Friday. She found the root cause while the rest of us were still triaging." },
+        { "who": "bot", "text": "How would you describe her code quality and engineering practices?" },
+        { "who": "user", "text": "Her code reviews were a masterclass. The whole team got better just by reading them." },
+        { "who": "bot", "text": "How did she work with non-technical teammates?" },
+        { "who": "user", "text": "Really well. Product and support trusted her to explain trade-offs in plain language." },
+        { "who": "bot", "text": "How quickly did she pick up new technologies?" },
+        { "who": "user", "text": "Fast. She was productive on the new ledger stack within a few weeks." },
+        { "who": "bot", "text": "How did she handle tight deadlines or production incidents?" },
+        { "who": "user", "text": "Calm. She's the person you want on the bridge at 2 a.m." },
+        { "who": "bot", "text": "We're considering her for a Senior Software Engineer role that owns our payments platform. How do you think she'd perform?" },
+        { "who": "user", "text": "Very well. That's exactly the work she did for us, and she did it at a senior level." }
+      ]
+    },
+    "daniel": {
+      "referee": "Daniel Weiss",
+      "starts_at_seconds": 41,
+      "lines": [
+        { "id": "d00", "who": "user", "text": "I'm sorry, company policy is that I can only confirm dates and title.", "gap": 0.4 },
+        { "id": "d01", "who": "bot", "text": "I completely understand, and I appreciate your transparency. Is there anything at all you'd like us to know about Maria as a professional?", "gap": 0.6 },
+        { "id": "d02", "who": "user", "text": "Just that she's eligible for rehire. That's all I can share.", "say": "Just that she's eligible for re-hire. That's all I can share.", "gap": 0.7 }
+      ],
+      "skipped_before": [
+        { "who": "bot", "text": "Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with Daniel Weiss?" },
+        { "who": "user", "text": "Yes, this is Daniel." },
+        { "who": "bot", "text": "Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes." },
+        { "who": "user", "text": "Sure. I can confirm she worked here from 2019 to 2021, as a software engineer." },
+        { "who": "bot", "text": "Thank you. How would you describe her work on your team?" }
+      ],
+      "skipped_after": [
+        { "who": "bot", "text": "That's helpful. Thank you so much for your time. This is genuinely useful to us." }
+      ]
+    }
+  }
+}

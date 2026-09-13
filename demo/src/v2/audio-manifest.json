@@ -1,0 +1,240 @@
+{
+  "narration": {
+    "n01_intro": {
+      "file": "v2/audio/narration/n01_intro.wav",
+      "duration": 9.267,
+      "text": "Reference checks are the part of hiring nobody has time for. Hours of phone tag, for every candidate. RefCheck A.I. hands those calls to Call E."
+    },
+    "n02_dashboard": {
+      "file": "v2/audio/narration/n02_dashboard.wav",
+      "duration": 4.675,
+      "text": "Every candidate lands on one dashboard, with a score and a clear recommendation."
+    },
+    "n03_templates": {
+      "file": "v2/audio/narration/n03_templates.wav",
+      "duration": 8.452,
+      "text": "Question sets are tuned by role, with follow-up probes for vague answers. Each set becomes the result schema Call E fills in on the call."
+    },
+    "n04_candidate": {
+      "file": "v2/audio/narration/n04_candidate.wav",
+      "duration": 2.337,
+      "text": "A new check starts with the candidate and the role."
+    },
+    "n05_references": {
+      "file": "v2/audio/narration/n05_references.wav",
+      "duration": 3.586,
+      "text": "Then two to four references, and how each one knows the candidate."
+    },
+    "n06_template": {
+      "file": "v2/audio/narration/n06_template.wav",
+      "duration": 1.118,
+      "text": "Pick the question set."
+    },
+    "n07_launch": {
+      "file": "v2/audio/narration/n07_launch.wav",
+      "duration": 4.223,
+      "text": "And launch. Call E dials every reference at once, each on its own line."
+    },
+    "n08_results": {
+      "file": "v2/audio/narration/n08_results.wav",
+      "duration": 9.012,
+      "text": "Each call comes back as JSON that Call E has already validated against our schema. The check scores itself, and the recruiter gets an email."
+    },
+    "n09_report": {
+      "file": "v2/audio/narration/n09_report.wav",
+      "duration": 5.536,
+      "text": "Every reference shows strengths, red flags, quotes, a score for each question, and the full transcript."
+    },
+    "n10_share": {
+      "file": "v2/audio/narration/n10_share.wav",
+      "duration": 5.373,
+      "text": "Share a read-only link with the hiring manager. Referee contact details stay private."
+    },
+    "n11_pdf": {
+      "file": "v2/audio/narration/n11_pdf.wav",
+      "duration": 1.282,
+      "text": "Or export a P.D.F."
+    },
+    "n12_outro": {
+      "file": "v2/audio/narration/n12_outro.wav",
+      "duration": 4.464,
+      "text": "Hours of phone tag, down to one click. RefCheck A.I., built on Call E."
+    }
+  },
+  "calls": {
+    "james": {
+      "lines": [
+        {
+          "id": "j00",
+          "who": "user",
+          "text": "Hello?",
+          "file": "v2/audio/call/james-j00.wav",
+          "start": 0.35,
+          "duration": 0.577
+        },
+        {
+          "id": "j01",
+          "who": "bot",
+          "text": "Hello, this is Alex calling from the Northwind recruiting team. Am I speaking with James Okafor?",
+          "file": "v2/audio/call/james-j01.wav",
+          "start": 1.477,
+          "duration": 5.549
+        },
+        {
+          "id": "j02",
+          "who": "user",
+          "text": "Yes, speaking.",
+          "file": "v2/audio/call/james-j02.wav",
+          "start": 7.476,
+          "duration": 0.867
+        },
+        {
+          "id": "j03",
+          "who": "bot",
+          "text": "Great. Maria Chen listed you as a reference, and she's given Northwind permission to contact you. Is now a good time? I'll need about ten minutes.",
+          "file": "v2/audio/call/james-j03.wav",
+          "start": 8.843,
+          "duration": 8.442
+        },
+        {
+          "id": "j04",
+          "who": "user",
+          "text": "Oh, sure! Happy to talk about Maria. Go ahead.",
+          "file": "v2/audio/call/james-j04.wav",
+          "start": 17.685,
+          "duration": 2.48
+        },
+        {
+          "id": "j05",
+          "who": "bot",
+          "text": "To start, how would you describe her technical ability?",
+          "file": "v2/audio/call/james-j05.wav",
+          "start": 20.715,
+          "duration": 2.711
+        },
+        {
+          "id": "j06",
+          "who": "user",
+          "text": "Honestly? One of the strongest engineers I've ever managed.",
+          "file": "v2/audio/call/james-j06.wav",
+          "start": 23.926,
+          "duration": 3.131
+        },
+        {
+          "id": "j07",
+          "who": "bot",
+          "text": "That's helpful. Can you give me a specific example of her best technical work?",
+          "file": "v2/audio/call/james-j07.wav",
+          "start": 27.657,
+          "duration": 4.096,
+          "tag": "probe"
+        },
+        {
+          "id": "j08",
+          "who": "user",
+          "text": "Sure. She led our move to a new ledger system, with zero downtime. And she wrote most of the rollback plan herself.",
+          "file": "v2/audio/call/james-j08.wav",
+          "start": 32.203,
+          "duration": 6.414
+        },
+        {
+          "id": "j09",
+          "who": "bot",
+          "text": "Last question. Would you hire Maria again for an engineering role?",
+          "file": "v2/audio/call/james-j09.wav",
+          "start": 39.967,
+          "duration": 3.625,
+          "skip": true
+        },
+        {
+          "id": "j10",
+          "who": "user",
+          "text": "In a heartbeat. If I were starting a team tomorrow, she's the first call I'd make.",
+          "file": "v2/audio/call/james-j10.wav",
+          "start": 44.042,
+          "duration": 4.365
+        },
+        {
+          "id": "j11",
+          "who": "bot",
+          "text": "Thank you so much for your time. This is genuinely useful to us.",
+          "file": "v2/audio/call/james-j11.wav",
+          "start": 48.957,
+          "duration": 3.653
+        },
+        {
+          "id": "j12",
+          "who": "user",
+          "text": "Happy to help. Good luck!",
+          "file": "v2/audio/call/james-j12.wav",
+          "start": 52.91,
+          "duration": 1.24
+        }
+      ],
+      "end": 54.5
+    },
+    "daniel": {
+      "lines": [
+        {
+          "id": "d00",
+          "who": "user",
+          "text": "I'm sorry, company policy is that I can only confirm dates and title.",
+          "file": "v2/audio/call/daniel-d00.wav",
+          "start": 0.4,
+          "duration": 4.847
+        },
+        {
+          "id": "d01",
+          "who": "bot",
+          "text": "I completely understand, and I appreciate your transparency. Is there anything at all you'd like us to know about Maria as a professional?",
+          "file": "v2/audio/call/daniel-d01.wav",
+          "start": 5.847,
+          "duration": 7.849
+        },
+        {
+          "id": "d02",
+          "who": "user",
+          "text": "Just that she's eligible for rehire. That's all I can share.",
+          "file": "v2/audio/call/daniel-d02.wav",
+          "start": 14.396,
+          "duration": 3.751
+        }
+      ],
+      "end": 18.497
+    }
+  },
+  "sfx": {
+    "ringback": {
+      "file": "v2/audio/sfx/ringback.wav",
+      "duration": 2.0
+    },
+    "pickup": {
+      "file": "v2/audio/sfx/pickup.wav",
+      "duration": 0.09
+    },
+    "hangup": {
+      "file": "v2/audio/sfx/hangup.wav",
+      "duration": 0.42
+    },
+    "click": {
+      "file": "v2/audio/sfx/click.wav",
+      "duration": 0.08
+    },
+    "key": {
+      "file": "v2/audio/sfx/key.wav",
+      "duration": 0.04
+    },
+    "chime": {
+      "file": "v2/audio/sfx/chime.wav",
+      "duration": 0.9
+    },
+    "skip": {
+      "file": "v2/audio/sfx/skip.wav",
+      "duration": 0.75
+    },
+    "line": {
+      "file": "v2/audio/sfx/line.wav",
+      "duration": 8.0
+    }
+  }
+}

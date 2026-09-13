@@ -1,0 +1,57 @@
+{
+  "01_hook": {
+    "file": "vo/01_hook.mp3",
+    "seconds": 18.0,
+    "text": "Every hire needs reference checks. And every recruiter quietly dreads them. Three to five hours of phone tag per candidate, chasing managers who never pick up. So most teams either skip it, or rubber stamp it. RefCheck A.I. does it properly, in about twenty minutes, with nobody on the line."
+  },
+  "02_dashboard": {
+    "file": "vo/02_dashboard.mp3",
+    "seconds": 9.84,
+    "text": "This is the recruiter's dashboard. Every candidate, every score, at a glance. Green rings passed. Amber needs a second look. Let's run a new check."
+  },
+  "03_candidate": {
+    "file": "vo/03_candidate.mp3",
+    "seconds": 13.728,
+    "text": "Step one, who are we hiring? Maria Chen, Senior Software Engineer, at Acme Corp. The job description summary is optional, but it's what lets the agent ask role specific fit questions, instead of generic ones."
+  },
+  "04_references": {
+    "file": "vo/04_references.mp3",
+    "seconds": 11.208,
+    "text": "Step two, the references. Name, phone number, and, importantly, the relationship. A former direct manager gets asked very different questions than a peer. Add up to four."
+  },
+  "05_template": {
+    "file": "vo/05_template.mp3",
+    "seconds": 9.048,
+    "text": "Step three, the question set. Nine structured questions, tuned per role family. Engineering, sales, or leadership. Or write your own."
+  },
+  "06_launch": {
+    "file": "vo/06_launch.mp3",
+    "seconds": 2.4,
+    "text": "Step four. Review, and launch."
+  },
+  "07_calle": {
+    "file": "vo/07_calle.mp3",
+    "seconds": 31.248,
+    "text": "This is where Call E takes over. Each reference gets a real outbound phone call. The agent introduces itself, confirms consent, and works through the questions conversationally. It probes when an answer is vague. It notes hesitation, because hesitation is signal. And if H.R. says we only confirm employment dates, it accepts that gracefully and moves on. And every call comes back as JSON that Call E has already validated against our own schema. There is no second model reading the transcript and guessing."
+  },
+  "08_progress": {
+    "file": "vo/08_progress.mp3",
+    "seconds": 3.72,
+    "text": "While the calls run, the recruiter watches progress live."
+  },
+  "09_report": {
+    "file": "vo/09_report.mp3",
+    "seconds": 18.744,
+    "text": "And here's the payoff. A weighted score out of ten. Would you rehire this person counts double, because it's the single most predictive answer. Then a clear recommendation. And per reference: strengths, red flags, notable quotes, a score for every question, and the full transcript if you'd rather read it yourself."
+  },
+  "10_export": {
+    "file": "vo/10_export.mp3",
+    "seconds": 4.032,
+    "text": "One click exports a shareable P.D.F. for the hiring panel."
+  },
+  "11_outro": {
+    "file": "vo/11_outro.mp3",
+    "seconds": 11.04,
+    "text": "Five hours of phone work, down to twenty minutes. And a hiring decision backed by evidence, instead of a voicemail nobody returned. RefCheck A.I. Built on Call E."
+  }
+}
